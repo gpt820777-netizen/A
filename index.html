@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometric Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="home">
+      <div class="hero__content">
+        <p class="eyebrow">CREATIVE FRONT-END DESIGNER</p>
+        <h1>
+          Hello, I am <span>Jae</span>.<br />
+          I build geometric, responsive experiences.
+        </h1>
+        <p>
+          Shapes, grids, and bold colors guide my work. 아래 포트폴리오에서 디지털
+          조형미를 느껴보세요.
+        </p>
+        <div class="hero__actions">
+          <a class="btn" href="#projects">프로젝트 보기</a>
+          <a class="btn btn--ghost" href="#contact">문의하기</a>
+        </div>
+      </div>
+      <div class="hero__shapes" aria-hidden="true">
+        <div class="shape shape--circle"></div>
+        <div class="shape shape--triangle"></div>
+        <div class="shape shape--square"></div>
+      </div>
+      <div class="hero__grid" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="section section--about" id="about">
+        <div class="section__title">ABOUT</div>
+        <div class="section__content">
+          <h2>기하학적 사고로 문제를 푸는 디자이너</h2>
+          <p>
+            반복되는 패턴, 45도의 선, 원과 정사각형의 조합은 제가 인터페이스를
+            설계할 때 참고하는 언어입니다. 사용성과 미학을 동시에 생각하며,
+            브랜딩이 살아있는 웹 경험을 디자인합니다.
+          </p>
+          <ul class="pill-list">
+            <li>Grid-based layout</li>
+            <li>Creative Coding</li>
+            <li>Interaction Design</li>
+            <li>Web Animation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section section--projects" id="projects">
+        <div class="section__title">PROJECTS</div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-card__shape"></div>
+            <h3>Modular Gallery</h3>
+            <p>
+              격자 모양을 기반으로 한 디지털 갤러리. 레이아웃이 사용자의 화면
+              비율에 맞춰 유동적으로 변화합니다.
+            </p>
+            <span>React · WebGL · Motion</span>
+          </article>
+          <article class="project-card">
+            <div class="project-card__shape"></div>
+            <h3>Signal Identity</h3>
+            <p>
+              반사되는 삼각형과 대칭 구조를 활용해 브랜드 아이덴티티와 랜딩
+              페이지를 제작했습니다.
+            </p>
+            <span>Branding · Framer · Prototype</span>
+          </article>
+          <article class="project-card">
+            <div class="project-card__shape"></div>
+            <h3>Orbit Dashboard</h3>
+            <p>
+              원과 궤도를 모티프로 만든 데이터 시각화 대시보드. 다크모드와 네온
+              포인트로 미래적인 느낌을 강조했습니다.
+            </p>
+            <span>Data viz · D3.js · UX</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--skills" id="skills">
+        <div class="section__title">SKILLS</div>
+        <div class="skills">
+          <div class="skill">
+            <h4>Design Toolkit</h4>
+            <p>Figma / Framer / Illustrator / Cinema 4D</p>
+          </div>
+          <div class="skill">
+            <h4>Development</h4>
+            <p>HTML5 / CSS3 / Three.js / GSAP / React</p>
+          </div>
+          <div class="skill">
+            <h4>Mindset</h4>
+            <p>Systems thinking, Visual storytelling, Accessibility</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contact">
+        <div class="section__title">CONTACT</div>
+        <div class="contact-card">
+          <h2>새로운 협업을 기다립니다</h2>
+          <p>
+            아이디어가 있다면 언제든지 메시지를 보내주세요. 24시간 이내에 답장
+            드립니다.
+          </p>
+          <div class="contact-card__actions">
+            <a class="btn" href="mailto:hello@jae.design">hello@jae.design</a>
+            <a class="btn btn--ghost" href="https://www.behance.net/" target="_blank" rel="noreferrer"
+              >Behance</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2024 Jae Park — Geometry driven experiences</p>
+      <div class="footer__links">
+        <a href="#home">Top</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
