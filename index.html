@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Archive — Geometry Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <section class="panel intro" aria-labelledby="archiveHeading">
+        <div class="intro__grid" aria-hidden="true"></div>
+        <div class="intro__content">
+          <p class="eyebrow">INTERACTIVE ARCHIVING</p>
+          <h1 id="archiveHeading">기하학을 수집하는 인터랙티브 페이지</h1>
+          <p>
+            드로잉, 설치, 웹 익스페리먼트를 한 화면에 정리했습니다. 슬라이더와
+            필터를 움직이며 시간의 결을 따라가 보세요. 각 카드를 클릭하면 세부
+            메모가 오른쪽에 표시됩니다.
+          </p>
+          <div class="intro__chips">
+            <span>실험 기록</span>
+            <span>데이터 드리븐</span>
+            <span>반응형 인터랙션</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel timeline" aria-labelledby="timelineHeading">
+        <div>
+          <p class="eyebrow">YEAR TRACKER</p>
+          <h2 id="timelineHeading">작업 온도계</h2>
+          <p>
+            연도를 움직이면 해당 시기의 키워드와 생산량을 즉시 확인할 수 있습니다.
+          </p>
+        </div>
+        <div class="timeline__controls">
+          <label for="timelineRange">2018</label>
+          <input
+            id="timelineRange"
+            type="range"
+            min="2018"
+            max="2024"
+            value="2024"
+            step="1"
+          />
+          <span>2024</span>
+        </div>
+        <div class="timeline__readout">
+          <div>
+            <p class="label">Year</p>
+            <p class="timeline__year" id="timelineYear">2024</p>
+          </div>
+          <div>
+            <p class="label">Focus</p>
+            <p id="timelineSummary">네온 조명과 모듈형 인터페이스</p>
+          </div>
+          <div>
+            <p class="label">Archive Count</p>
+            <p id="timelineCount">6 works</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel archive" aria-labelledby="archiveListHeading">
+        <div class="archive__header">
+          <div>
+            <p class="eyebrow">ARCHIVE</p>
+            <h2 id="archiveListHeading">탐색 가능한 프로젝트</h2>
+          </div>
+          <div class="archive__filters" role="tablist" aria-label="작업 유형 필터">
+            <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">
+              전체
+            </button>
+            <button class="chip" data-filter="web" role="tab">웹</button>
+            <button class="chip" data-filter="installation" role="tab">설치</button>
+            <button class="chip" data-filter="identity" role="tab">아이덴티티</button>
+            <button class="chip" data-filter="data" role="tab">데이터 시각화</button>
+          </div>
+        </div>
+        <div class="archive__grid" id="archiveGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel detail" aria-live="polite" aria-labelledby="detailTitle">
+        <div class="detail__header">
+          <p class="eyebrow">DETAILS</p>
+          <div class="detail__meta">
+            <span id="detailYear">2024</span>
+            <span id="detailTags">WEB · MOTION</span>
+          </div>
+        </div>
+        <h2 id="detailTitle">선택된 작업이 여기에 나타납니다</h2>
+        <p id="detailSummary">
+          필터 혹은 카드를 클릭하면 작업 배경과 핵심 메모가 업데이트됩니다.
+        </p>
+        <dl class="detail__list">
+          <div>
+            <dt>기여</dt>
+            <dd id="detailRole">—</dd>
+          </div>
+          <div>
+            <dt>사용 기술</dt>
+            <dd id="detailTools">—</dd>
+          </div>
+          <div>
+            <dt>링크</dt>
+            <dd><a id="detailLink" href="#" target="_blank" rel="noreferrer">—</a></dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
